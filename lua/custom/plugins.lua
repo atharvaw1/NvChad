@@ -13,6 +13,9 @@ local plugins = {
         'xiyaowong/transparent.nvim',
         lazy = false
 
+    },
+    {
+    'ThePrimeagen/vim-be-good',
     }
 }
 return plugins
