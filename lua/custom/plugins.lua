@@ -10,12 +10,11 @@ local plugins = {
         end,
     },
     {
-        'xiyaowong/transparent.nvim',
-        lazy = false
-
+      'ThePrimeagen/vim-be-good',
     },
     {
-    'ThePrimeagen/vim-be-good',
-    }
+      'mfussenegger/nvim-dap'
+    },
+    {require("custom.harpoon")}
 }
 return plugins
