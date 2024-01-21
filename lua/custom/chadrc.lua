@@ -2,7 +2,7 @@
 local M = {}
 M.mappings = require "custom.mappings"
 M.plugins = "custom.plugins"
-M.ui = { theme = 'catppuccin',
+M.ui = { theme = 'tokyodark',
         transparency = false,
         statusline = {
           theme = "minimal", -- default/vscode/vscode_colored/minimal
