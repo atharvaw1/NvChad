@@ -11,7 +11,7 @@ return{
       {"<a-2>", function() harpoon:list():select(2) end, desc ="Harpoon buffer 2"},
       {"<a-3>", function() harpoon:list():select(3) end, desc ="Harpoon buffer 3"},
       {"<a-4>", function() harpoon:list():select(4) end, desc ="Harpoon buffer 4"},
-      {"<a-4>", function() harpoon:list():select(4) end, desc ="Harpoon buffer 4"},
+      {"<a-5>", function() harpoon:list():select(5) end, desc ="Harpoon buffer 5"},
 
       {"<tab>", function() harpoon:list():next() end, desc ="Harpoon next buffer"},
       {"<s-tab>", function() harpoon:list():prev() end, desc ="Harpoon prev buffer"},

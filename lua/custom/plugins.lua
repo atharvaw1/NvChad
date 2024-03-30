@@ -11,6 +11,7 @@ local plugins = {
     },
     {
       'ThePrimeagen/vim-be-good',
+      cmd = "VimBeGood",
     },
     {
       'mfussenegger/nvim-dap',
@@ -50,6 +51,6 @@ local plugins = {
         require("core.utils").load_mappings("dap_python")
       end
     },
-    {require("custom.harpoon")}
+    {require("custom.harpoon")},
 }
 return plugins
