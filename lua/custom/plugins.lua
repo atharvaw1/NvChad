@@ -9,16 +9,15 @@ local plugins = {
             require "custom.lspconfig"
         end,
     },
-    {
-      'ThePrimeagen/vim-be-good',
-      cmd = "VimBeGood",
-    },
+  -- Formater
+    {require("custom.conform")},
     {
       'mfussenegger/nvim-dap',
       config = function()
         require("core.utils").load_mappings("dap")
       end
     },
+  -- Debugger
     {
       "rcarriga/nvim-dap-ui",
       dependencies = "mfussenegger/nvim-dap",
@@ -52,5 +51,10 @@ local plugins = {
       end
     },
     {require("custom.harpoon")},
+    {require("custom.trouble")},
+    {
+      'ThePrimeagen/vim-be-good',
+      cmd = "VimBeGood",
+    },
 }
 return plugins
