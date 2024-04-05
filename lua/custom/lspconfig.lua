@@ -1,9 +1,9 @@
-local configs = require("plugins.configs.lspconfig")
+local configs = require "plugins.configs.lspconfig"
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "pyright", "gopls", "denols"}
+local servers = { "pyright", "gopls", "denols" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

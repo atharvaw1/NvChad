@@ -4,10 +4,10 @@ local M = {}
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = {"<cmd> DapToggleBreakpoint <CR>"},
-    ["<leader>dk"] = {"<cmd> lua require'dap'.continue() <CR>"},
-    ["<leader>dl"] = {"<cmd> lua require'dap'.run_last() <CR>"},
-  }
+    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>" },
+    ["<leader>dk"] = { "<cmd> lua require'dap'.continue() <CR>" },
+    ["<leader>dl"] = { "<cmd> lua require'dap'.run_last() <CR>" },
+  },
 }
 
 M.dap_python = {
@@ -15,13 +15,13 @@ M.dap_python = {
   n = {
     ["<leader>dpr"] = {
       function()
-        require('dap-python').test_method()
-      end
-    }
-  }
+        require("dap-python").test_method()
+      end,
+    },
+  },
 }
 M.nvterm = {
-  plugin =true,
+  plugin = true,
 
   n = {
     -- ["<leader>gg"] = {"<cmd> lua require'nvterm.terminal'.send('lazygit && exit\\r','float')<CR><A-i><A-i>"}
@@ -34,17 +34,16 @@ M.nvterm = {
       end,
       "Open lazygit",
     },
-  }
-
+  },
 }
 M.general = {
   n = {
     ["<leader>fs"] = {
-      function ()
+      function()
         require("auto-session.session-lens").search_session()
       end,
       "Search sessions",
-    }
-  }
+    },
+  },
 }
 return M

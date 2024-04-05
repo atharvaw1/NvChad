@@ -13,16 +13,17 @@ return {
       desc = "Buffer Diagnostics (Trouble)",
     },
   },
-  opts = {modes = {
-    test = {
-      mode = "diagnostics",
-      preview = {
-        type = "split",
-        relative = "win",
-        position = "right",
-        size = 0.3,
+  opts = {
+    modes = {
+      test = {
+        mode = "diagnostics",
+        preview = {
+          type = "split",
+          relative = "win",
+          position = "right",
+          size = 0.3,
+        },
       },
-    },
     },
   }, -- for default options, refer to the configuration section for custom setup.
 }
