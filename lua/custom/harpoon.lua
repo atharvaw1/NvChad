@@ -69,17 +69,9 @@ return {
         end,
         desc = "Harpoon prev buffer",
       },
-      {
-        "<a-9>",
-        function()
-          toggle_telescope(harpoon:list())
-        end,
-        desc = "Open Harpoon window",
-      },
     }
   end,
   config = function()
     require("harpoon").setup()
-    require("telescope").load_extension "harpoon"
   end,
 }

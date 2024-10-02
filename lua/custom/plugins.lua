@@ -11,45 +11,45 @@ local plugins = {
   { require "custom.nvterm" },
   -- Formater
   { require "custom.conform" },
-  {
-    "mfussenegger/nvim-dap",
-    config = function()
-      require("core.utils").load_mappings "dap"
-    end,
-  },
+  -- {
+  --   "mfussenegger/nvim-dap",
+  --   config = function()
+  --     require("core.utils").load_mappings "dap"
+  --   end,
+  -- },
   -- Debugger
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = "mfussenegger/nvim-dap",
-    config = function()
-      local dap = require "dap"
-      local dapui = require "dapui"
-      dapui.setup()
-      dap.listeners.after.event_initialized["dapui_config"] = function()
-        dapui.open()
-      end
-      dap.listeners.before.event_terminated["dapui_config"] = function()
-        dapui.close()
-      end
-      dap.listeners.before.event_exited["dapui_config"] = function()
-        dapui.close()
-      end
-    end,
-  },
-  {
-    "mfussenegger/nvim-dap-python",
-    dependencies = {
-      "mfussenegger/nvim-dap",
-      "rcarriga/nvim-dap-ui",
-    },
-    ft = "python",
-    config = function()
-      local path_linux = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-      local path_windows = "python"
-      require("dap-python").setup(path_windows)
-      require("core.utils").load_mappings "dap_python"
-    end,
-  },
+  -- {
+  --   "rcarriga/nvim-dap-ui",
+  --   dependencies = "mfussenegger/nvim-dap",
+  --   config = function()
+  --     local dap = require "dap"
+  --     local dapui = require "dapui"
+  --     dapui.setup()
+  --     dap.listeners.after.event_initialized["dapui_config"] = function()
+  --       dapui.open()
+  --     end
+  --     dap.listeners.before.event_terminated["dapui_config"] = function()
+  --       dapui.close()
+  --     end
+  --     dap.listeners.before.event_exited["dapui_config"] = function()
+  --       dapui.close()
+  --     end
+  --   end,
+  -- },
+  -- {
+  --   "mfussenegger/nvim-dap-python",
+  --   dependencies = {
+  --     "mfussenegger/nvim-dap",
+  --     "rcarriga/nvim-dap-ui",
+  --   },
+  --   ft = "python",
+  --   config = function()
+  --     local path_linux = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+  --     local path_windows = "python"
+  --     require("dap-python").setup(path_windows)
+  --     require("core.utils").load_mappings "dap_python"
+  --   end,
+  -- },
   { require "custom.harpoon" },
   { require "custom.trouble" },
   {
@@ -88,5 +88,15 @@ local plugins = {
       end, { expr = true, silent = true })
     end,
   },
+
+  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
+
+  {
+    '2kabhishek/tdo.nvim',
+    dependencies =  'nvim-telescope/telescope.nvim',
+    cmd = { 'Tdo', 'TdoEntry', 'TdoNote', 'TdoTodos', 'TdoToggle', 'TdoFind', 'TdoFiles' },
+    keys = { '[t', ']t' },
+  },
+
 }
 return plugins

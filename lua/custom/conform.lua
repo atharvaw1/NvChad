@@ -4,6 +4,7 @@ return {
   config = function()
     require("conform").setup {
       formatters_by_ft = {
+        rust = { { "rustfmt" } },
         lua = { "stylua" },
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
