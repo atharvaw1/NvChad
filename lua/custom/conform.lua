@@ -4,15 +4,9 @@ return {
   config = function()
     require("conform").setup {
       formatters_by_ft = {
-        rust = { { "rustfmt" } },
+        rust = { "rustfmt" },
         lua = { "stylua" },
-        typescript = { { "prettierd", "prettier" } },
-        typescriptreact = { { "prettierd", "prettier" } },
-        javascript = { { "prettierd", "prettier" } },
-        javascriptreact = { { "prettierd", "prettier" } },
-        json = { { "prettierd", "prettier" } },
-        html = { { "prettierd", "prettier" } },
-        css = { { "prettierd", "prettier" } },
+        python = { "black" },
       },
       format_on_save = {
         -- These options will be passed to conform.format()

@@ -1,6 +1,6 @@
 return {
   "folke/trouble.nvim",
-  branch = "dev", -- IMPORTANT!
+  branch = "main", -- IMPORTANT!
   keys = {
     {
       "<leader>xx",
@@ -11,6 +11,11 @@ return {
       "<leader>xX",
       "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
       desc = "Buffer Diagnostics (Trouble)",
+    },
+    {
+      "<leader>xQ",
+      "<cmd>Trouble qflist toggle<cr>",
+      desc = "Quickfix List (Trouble)",
     },
   },
   opts = {
